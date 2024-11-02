@@ -1,0 +1,108 @@
+<!DOCTYPE html>  
+<html lang="id">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Timer Pomodoro</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="timer.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalam">
+</head>  
+<body>
+<div class="judul">
+    <h1>Pomodoro Timer</h1>
+</div>
+<div class="container">  
+    <!-- Kolom Kiri (di css jadi kanan): To-Do List -->  
+    <div class="column" id="todo-column">  
+        <h2>Apa Saja Tugas Hari Ini?</h2>  
+        <div class="todo-container">  
+            <div class="todo-item">  
+                <input type="text" placeholder="Tugas 1">  
+                <button onclick="removeTask(this)">X</button>  
+            </div>  
+            <div class="todo-item">  
+                <input type="text" placeholder="Tugas 2">  
+                <button onclick="removeTask(this)">X</button>  
+            </div>  
+            <div class="todo-item">  
+                <input type="text" placeholder="Tugas 3">  
+                <button onclick="removeTask(this)">X</button>  
+            </div>  
+            <div class="todo-item">  
+                <input type="text" placeholder="Tugas 4">  
+                <button onclick="removeTask(this)">X</button>  
+            </div>  
+            <div class="todo-item">  
+                <input type="text" placeholder="Tugas 5">  
+                <button onclick="removeTask(this)">X</button>  
+            </div>  
+        </div>  
+    </div>  
+    <!-- Kolom Tengah: Timer -->  
+    <div class="column2" id="timer-column">  
+        <div id="timer-display">  
+            <div id="minutes">00</div>  
+            <div id="titik-dua">:</div>  
+            <div id="seconds">00</div>  
+        </div>  
+        <div class="timer-buttons">  
+            <div class="kiri">
+                <p>Mulai<br>Pomodoro<br>25 Menit</p>
+                <button onclick="startTimer(1500)">  
+                    <i class="fa fa-play"></i>  
+                </button>  
+            </div>  
+            <div class="tengah">
+                <p>Mulai<br>Istirahat<br>5 Menit</p>  
+                <button onclick="startTimer(300)">  
+                    <i class="fa fa-play"></i>  
+                </button>  
+            </div>  
+        </div>  
+        <div class="bawah">  
+            <button onclick="stopTimer()">  
+                <i class="fa fa-pause"></i>  
+            </button>   
+        </div>   
+        <div id="notification" class="notification"></div>
+    </div>
+    <!-- Kolom Kiri: Musik -->  
+    <div class="column" id="music-column">  
+        <h2>Putar Musik Lofi Pilihanmu</h2>
+        <div class="music-item">  
+            <img src="background-lofi-1.jpg" alt="Lofi Semangat" class="music-image">  
+            <div class="music-info">
+                <p>Lofi Hip-Hop</p>  
+                <audio id="audio-lofi-1" src="audio-lofi-1.mp3" loop></audio>  
+                <button class="play-btn" onclick="toggleAudio('audio-lofi-1', this)">  
+                    <i class="fa fa-play"></i>  
+                </button>  
+            </div>  
+        </div>  
+        <div class="music-item">  
+            <img src="background-lofi-2.jpg" alt="Lofi Tenang" class="music-image">  
+            <div class="music-info">  
+                <p>Lofi Chillwave</p>  
+                <audio id="audio-lofi-2" src="audio-lofi-2.mp3" loop></audio>  
+                <button class="play-btn" onclick="toggleAudio('audio-lofi-2', this)">  
+                    <i class="fa fa-play"></i>  
+                </button>  
+            </div>  
+        </div>  
+        <div class="music-item">  
+            <img src="background-lofi-3.jpg" alt="Lofi Kuat" class="music-image">  
+            <div class="music-info">  
+                <p>Lofi Ambient</p>  
+                <audio id="audio-lofi-3" src="audio-lofi-3.mp3" loop></audio>  
+                <button class="play-btn" onclick="toggleAudio('audio-lofi-3', this)">  
+                    <i class="fa fa-play"></i>  
+                </button>  
+            </div>  
+        </div>  
+     </div>   
+</div>  
+<script src="timer.js"></script>  
+</body>  
+</html>

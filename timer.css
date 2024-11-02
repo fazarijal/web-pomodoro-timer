@@ -1,0 +1,202 @@
+* {  
+    box-sizing: border-box;  
+    margin: 0;  
+    padding: 0;  
+}
+body {  
+    font-family: 'Barlow Semi Condensed';  
+    background-image: url('background-utama.jpg');
+    background-size:cover;
+    justify-content: center;  
+    align-items: center;  
+    transition: background-image 0.5s ease-in-out;
+}
+.judul{
+    text-align: center;
+    margin: 30px auto 20px auto;
+    font-family: 'Kalam';
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px white;
+}
+.container {  
+    display: flex;
+    height: 80%; 
+    width: 90%;
+    justify-content: center;
+    margin-left: 62px;
+}  
+.column {  
+    flex: 1;  
+    margin: 10px;  
+    padding: 20px;  
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;  
+    display: flex; 
+    gap: 15px; 
+    flex-direction: column;  
+    justify-content: space-between; 
+}  
+.column h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.music-item {  
+    align-items: center;  
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: 310px;
+    height: 110px;
+    background-color: white;
+    border-color: #0056b3;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    border-radius: 10px;
+    padding: 0;
+    gap: 10px;
+    text-align: center;
+}  
+.music-image {  
+    width: 180px;  
+    height: 110px;  
+    border-radius: 10px;
+}  
+.music-info {  
+    flex: 1;  
+    color: #0056b3;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+}  
+.play-btn {  
+    background: #007bff;  
+    border: none;  
+    cursor: pointer;  
+    color: white;
+    margin-top: 15px;
+}  
+.play-btn:hover {  
+    color: white;
+    background-color: #0056b3;
+}
+.column2 {  
+    flex: 1;  
+    margin: 10px;  
+    padding: 5px 20px 20px 20px;  
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;  
+    display: flex; 
+    gap: 15px; 
+    flex-direction: column;  
+    justify-content: space-between;
+    transition: background-color 0.5s ease;
+}  
+#timer-display {  
+    text-align: center;
+    display: flex;  
+    margin-left: 20px;  
+    margin-right: 10px;  
+    margin-top: 40px;  
+}  
+#minutes, #titik-dua, #seconds {  
+    font-size: 80px;  
+    flex: 1;  
+    letter-spacing: 10px;  
+}  
+.timer-buttons {  
+    display: flex;  
+    justify-content: space-around;  
+    font-size: 20px;  
+}  
+.kiri, .tengah, .bawah {  
+    padding-top: 20px;  
+    align-items: center;  
+    text-align: center;  
+    border-width: 1px;  
+    border-style: solid;  
+    border-color: #0056b3;  
+    border-radius: 10px;  
+}  
+.kiri {  
+    width: 140px;  
+    height: 180px;  
+    background-color: rgb(255, 162, 162);  
+}  
+.tengah {  
+    width: 140px;  
+    height: 180px;  
+    background-color: rgb(170, 255, 183);  
+}  
+.kiri p, .tengah p{
+    margin-bottom: 20px;
+}
+.bawah {  
+    width: 320px;  
+    height: 80px;  
+    background-color: rgb(216, 216, 216);  
+    margin-left: 15px;   
+    margin-bottom: 12px;  
+    padding-top: 17px;
+}  
+button {  
+    padding: 10px 15px;  
+    border: none;  
+    border-radius: 5px;  
+    background-color: #007bff;  
+    color: white;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+    font-size: 20px;  
+    margin-bottom: 5px;  
+}  
+button:hover {  
+    background-color: #0056b3;  
+}  
+.notification {  
+    position: fixed; 
+    width: 500px;
+    height: 200px; 
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    background-color: rgba(0, 0, 0, 0.7);  
+    color: white;  
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 20px 20px; 
+    border-radius: 10px;  
+    display: none;
+    z-index: 1000;
+} 
+#notification p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.todo-container {  
+    display: flex;  
+    flex-direction: column;  
+    gap: 20px;
+    padding-bottom: 27px;
+}  
+.todo-container button{
+    background-color: rgb(255, 118, 118);  
+}
+.todo-container button:hover{
+    background-color: rgb(227, 107, 107);  
+}
+.todo-item {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-bottom: 10px;  
+    height: 50px;
+}  
+.todo-item input {  
+    flex: 1;  
+    margin-right: 10px;  
+    padding: 5px;
+    border: 1px solid #0056b3;  
+    border-radius: 5px;
+    font-size: 20px;
+}
